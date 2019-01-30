@@ -1,0 +1,325 @@
+<style>
+html,body{
+  min-width:500px;
+  color:#FA8072;
+  background-color:	#F5F5F5;
+  font-family:Arial;
+  line-height:1.5;
+}
+#navbar{
+ position:fixed;
+ min-width:290px;
+  top:0px;
+  left:0px;
+  width:0px;
+  height:100%;
+  border-right:solid;
+  border-color:rgba(0,0,255,127)
+}
+header{
+  color:grey;
+  font-size: 20px;
+  margin:20px;
+  text-align:center;
+  font-size:1.5em;
+  font-weight:lighter;
+}
+#main-doc header{
+  text-align:left;
+  margin:0px;
+}
+#navbar ul{
+   height:88%;
+   overflow-y:auto;
+   overflow-x:hidden;
+}
+#navbar li{
+  color: 	#708090;
+  border:1px solid;
+  border-bottom-width:0px;
+  padding:5px;
+  padding-left:45px;
+  list-style: none;
+  position:relative;
+ left:-50px;
+  width:100%;
+}
+#navbar a{
+  color: #4d4e53;
+  text-decoration:none;
+  cursor:pointer;
+} 
+#main-doc{
+  position: absolute;
+  margin-left:310px;
+  padding:25px;
+  margin-bottom:110px;
+}
+section article{
+  color: #87CEEB;
+  margin:15px;
+  font-size:1em;
+}
+section li {
+  margin:15px 20px 0px 20px;
+}
+code{
+  display:block;
+  text-align: left;
+  white-space: wrap;
+  position: relative;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+    background-color:#f7f7f7;
+  padding:30px;
+  margin:16px;
+    border-radius:10px;
+}
+@media only screen and (max-width: 815px) {
+    /* For mobile phones: */
+  #navbar ul{
+  border:1px solid;
+    height:207px;
+  }
+    #navbar{
+      background-color:white;
+      position:absolute;
+      top:0;
+      padding:0;
+      margin: 0;
+      width:100%;
+      max-height:275px;
+      border:none;
+      z-index:1;
+      border-bottom:2px solid;
+    }
+  #main-doc{
+    position: relative;
+    margin-left:0px;
+    margin-top:270px;
+  }
+  #main-doc section {
+/*     padding-top: 240px; */
+  }
+}
+@media only screen and (max-width: 400px) {
+  #main-doc{
+    margin-left:-10px;
+  }
+  code{
+    margin-left:-20px;
+    width:100%;
+    padding:15px;
+    padding-left:10px;
+    padding-right:45px;
+    min-width:233px;
+  }
+}
+
+</style>
+<nav id="navbar">
+  <header id="header">Python Documentation</header>
+  <ul>
+ <a class="nav-link" href="#getting strated" rel="Internal"><li>getting strated</li></a> 
+  <a class="nav-link" href="#keywords and identifiers" rel="Internal"><li>keywords and identifiers</li></a> 
+  <a class="nav-link" href="#statements and comments" rel="Internal"><li>Statement and comments</li></a> 
+  <a class="nav-link" href="#python datatypes" rel="Internal"><li>python datatypes</li></a> 
+  <a class="nav-link" href="#python conversion" rel="Internal"><li>python conversion</li></a>
+   <a class="nav-link" href="#python I/O and import" rel="Internal"><li>python I/O and import</li></a> 
+  <a class="nav-link" href="#python operators" rel="Internal"><li>python operators</li></a>
+  <a class="nav-link" href="#python namespace" rel="Internal"><li>python namespace</li></a> 
+  <a class="nav-link" href="#python ifelse" rel="Internal"><li>python ifelse</li></a> 
+  <a class="nav-link" href="#python forloop" rel="Internal"><li>python forloop</li></a> 
+  <a class="nav-link" href="#python whileloop" rel="Internal"><li>python whileloop</li></a> 
+  <a class="nav-link" href="#break and continue" rel="Internal"><li>break and continue</li></a>
+  </ul>
+</nav>
+  <main id="main-doc">
+    <section class="main-section" id="getting strated">
+      <header>Introduction</header>
+      <article>
+      <p>Python is a cross-platform programming language, meaning, it runs on multiple platforms like Windows, Mac OS X, Linux, Unix and has even been ported to the Java and .NET virtual machines. It is free and open source.</p>
+      <p>Even though most of today’s Linux and Mac have Python preinstalled in it, the version might be out-of-date. So, it is always a good idea to install the most current version. You can download the latest version of Python and install it</p>
+      <ul>
+        <li>This mode is used to execute Python program written in a file. Such a file is called a script. Scripts can be saved to disk for future use. Python scripts have the extension .py, meaning that the filename ends with .py.</li>
+        <li>We just need to save it with the .py extension. But using an IDE can make our life a lot easier. IDE is a piece of software that provides useful features like code hinting, syntax highlighting and checking, file explorers etc. to the programmer for application development</li>
+        </ul>
+      </article>
+    </section>
+  <section class="main-section" id="keywords and identifiers">
+    <header>keywords and identifiers</header>
+    <article> 
+      <p>We cannot use a keyword as variable name, function name or any other identifier. They are used to define the syntax and structure of the Python language.</p>
+      <p>There are 33 keywords in Python 3.3. This number can vary slightly in course of time.</p>
+      <ul>
+        <li>In Python, keywords are case sensitive.</li>
+        <li>Identifier is the name given to entities like class, functions, variables etc. in Python. It helps differentiating one entity from another.</li>
+      </ul>
+    </article>
+    </section>
+ <section class="main-section" id="Statement and comments">
+   <header>Statement and comments</header>
+   <article>
+     <p>In Python, end of a statement is marked by a newline character. But we can make a statement extend over multiple lines with the line continuation character</p>
+     <code>a = 1 + 2 + 3 + \
+    4 + 5 + 6 + \7 + 8 + 9</code>
+     <ul>
+       <li>The enforcement of indentation in Python makes the code look neat and clean. This results into Python programs that look similar and consistent.</li>
+     </ul>
+       </article>
+    </section>
+    <section class="main-section" id="python datatypes">
+      <header>python datatypes</header>
+      <article>
+        <p>Every value in Python has a datatype. Since everything is an object in Python programming, data types are actually classes and variables are instance (object) of these classes.</p>
+        <p>Integers, floating point numbers and complex numbers falls under Python numbers category. They are defined as int, float and complex class in Python.</p>
+        <code>
+>>> a = 1234567890123456789<br>
+>>> a<br>
+1234567890123456789<br>
+>>> b = 0.1234567890123456789<br>
+>>> b<br>
+0.12345678901234568<br>
+>>> c = 1+2j<br>
+>>> c<br>
+(1+2j)<br>
+        </code>
+      </article>   
+    </section>
+    <section class="main-section" id="python conversion">
+      <header>python conversion</header>
+      <article>
+      <p>The process of converting the value of one data type (integer, string, float, etc.) to another data type is called type conversion. Python has two types of type conversion.
+        <br>Implicit Type Conversion</br>
+    Explicit Type Conversion</p>
+      <ul>
+        <li>In Implicit type conversion, Python automatically converts one data type to another data type. This process doesn't need any user involvement</li>
+        <li>In Explicit Type Conversion, users convert the data type of an object to required data type. We use the predefined functions like int(), float(), str(), etc to perform explicit type conversion</li>
+    </ul>
+        </article>
+    </section>
+    <section class="main-section" id="python I/O and import">
+      <header>python I/O and import</header>
+      <article>
+        <p>Some of the functions like input() and print() are widely used for standard input and output operations respectively. Let us see the output section first.</p>
+        <code>print(*objects, sep=' ', end='\n', file=sys.stdout, flush=False)</code>
+        <p>Sometimes we would like to format our output to make it look attractive. This can be done by using the str.format() method. This method is visible to any string object.</p>
+        <code>print('Hello {name}, {greeting}'.format(greeting = 'Goodmorning', name = 'John'))
+          Hello John, Goodmorning</code>
+      </article>
+  </section>
+ <section class="main-section" id="python operators">
+   <header>python operators</header>
+   <article>
+     <p>Operators are special symbols in Python that carry out arithmetic or logical computation. The value that the operator operates on is called the operand.</p>
+     <code>>>2+3<br>
+       5</code>
+      <ul>
+        <li>Arithmetic operators are used to perform mathematical operations like addition, subtraction, multiplication etc</li>
+       </ul>
+     <code>x + y = 19<br>
+x - y = 11<br>
+x * y = 60<br>
+x / y = 3.75<br>
+x // y = 3<br>
+       x ** y = 50625</code>
+   </article>
+</section>
+ <section class="main-section" id="python namespace">
+   <header>python namespace</header>
+      <article>
+        <p>Name (also called identifier) is simply a name given to objects. Everything in Python is an object. Name is a way to access the underlying object.</p>
+        <ul>
+          <li>For example, when we do the assignment a = 2, here 2 is an object stored in memory and a is the name we associate it with. We can get the address (in RAM) of some object through the built-in function, id(). Let's check it.</li>
+        </ul>
+        <code>
+a = 2<br>
+# Output: id(2)= 10919424<br>
+print('id(2) =', id(2))<br>
+# Output: id(a) = 10919424<br>
+print('id(a) =', id(a))
+        </code>
+    <p>So now that we understand what names are, we can move on to the concept of namespaces.
+
+To simply put it, namespace is a collection of names.
+
+In Python, you can imagine a namespace as a mapping of every name, you have defined, to corresponding objects.
+
+Different namespaces can co-exist at a given time but are completely isolated.
+
+A namespace containing all the built-in names is created when we start the Python interpreter and exists as long we don't exit.</p>
+   </article>
+</section>
+ <section class="main-section" id="python ifelse">
+      <header>python ifelse</header>
+      <article>
+        <p>Decision making is required when we want to execute a code only if a certain condition is satisfied<br>
+          The if…elif…else statement is used in Python for decision making</p>
+       <ul>
+         <li>Here, the program evaluates the test expression and will execute statement(s) only if the text expression is True.
+If the text expression is False, the statement(s) is not executed.
+In Python, the body of the if statement is indicated by the indentation. Body starts with an indentation and the first unindented line marks the end</li>
+        </ul>
+     <code>
+num = 3<br>
+if num > 0:<br>
+    print(num, "is a positive number.")<br>
+print("This is always printed.")<br>
+num = -1<br>
+if num > 0:<br>
+    print(num, "is a positive number.")<br>
+print("This is also always printed.")<br>
+        </code>
+   </article>
+</section>
+ <section class="main-section" id="python forloop">
+      <header>python forloop</header>
+      <article>
+        <p>The for loop in Python is used to iterate over a sequence (list, tuple, string) or other iterable objects. Iterating over a sequence is called traversal</p>
+       <code>for val in sequence:<br>
+         Body of for</code>
+        <ul>
+          <li>Here, val is the variable that takes the value of the item inside the sequence on each iteration.</li>
+        </ul>
+   </article>
+</section>
+ <section class="main-section" id="python whileloop">
+      <header>python whileloop</header>
+      <article>
+        <p>The while loop in Python is used to iterate over a block of code as long as the test expression (condition) is true.</p>
+        <code>
+          while test_expression:<br>
+    Body of while
+        </code>
+        <ul>
+          <li>In Python, the body of the while loop is determined through indentation.</li>
+      <li>Body starts with indentation and the first unindented line marks the end.</li>
+   </ul>
+   </article>
+</section>
+ <section class="main-section" id="break and continue">
+      <header>python break and continue</header>
+      <article>
+        <p>In Python, break and continue statements can alter the flow of a normal loop.</br>
+Loops iterate over a block of code until test expression is false, but sometimes we wish to terminate the current iteration or even the whole loop without checking test expression.</br>
+The break and continue statements are used in these cases.</p>.
+      <code>        
+for val in "string":<br>
+    if val == "i":<br>
+        break<br>
+    print(val)<br>
+print("The end")<br>
+</code>
+  <ul>
+    <li>The continue statement is used to skip the rest of the code inside a loop for the current iteration only. Loop does not terminate but continues on with the next iteration</li>
+  </ul>
+    <code>
+      for val in "string":<br>
+    if val == "i":<br>
+        continue<br>
+    print(val)<br>
+print("The end")<br>
+   </article>
+</section>
+</main>

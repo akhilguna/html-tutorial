@@ -1,0 +1,388 @@
+<style>
+@import 'https://fonts.googleapis.com/css?family=Lato:400,700';
+
+body {
+  background-color: #eee;
+  font-family: 'Lato', sans-serif;
+}
+
+#wrapper {
+  position: relative;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+/** global classes styling **/
+
+.container {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.btn {
+  padding: 0 20px;
+  height: 40px;
+  font-size: 1em;
+  font-weight: 900;
+  text-transform: uppercase;
+  border: 3px black solid;
+  border-radius: 2px;
+  background: transparent;
+  cursor: pointer;
+}
+.grid{
+  display:flex;
+}
+header {
+  position:fixed;
+  top: 0;
+  min-height: 0px;
+  padding: 0px 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #eee;
+  @media (max-width: 600px) {
+    flex-wrap: wrap;
+  }
+}
+.logo {
+  width: 60vw;
+  
+  @media (max-width: 650px) {
+    margin-top: 15px;
+    width: 100%;
+    position: relative;
+  }
+}
+ img {
+    width: 50%;
+    height: 20%;
+    max-width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 20px;
+    @media (max-width: 650px) {
+      margin: 0 auto;
+    }
+  }
+}
+nav {
+  font-weight: 400;
+  
+  @media (max-width: 650px) {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 50px;
+    
+    li {
+     padding-bottom: 5px; 
+    }
+  }
+}
+  
+  ul {
+    width: 35vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+    @media (max-width: 650px) {
+      flex-direction: column;
+    }
+  }
+
+// hero
+
+#hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 200px;
+  margin-top: 50px;
+  h2 {
+    margin-bottom: 20px;
+    word-wrap: break-word;
+  }
+}
+
+  input[type="email"] {
+    max-width: 275px;
+    width: 100%;
+    padding: 5px;
+  }
+
+  input[type="submit"] {
+    max-width: 150px;
+    width: 100%;
+    height: 30px;
+    margin: 15px 0;
+    border: 0;
+    background-color: #f1c40f;
+    
+    &:hover {
+      background-color: orange;
+      transition: background-color 2s;
+    }
+  }
+  
+  @media (max-width: 650px) {
+    margin-top: 100px;
+  }
+}
+
+// features
+
+#models {
+  margin-top: 30px;
+  .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 125px;
+    width: 20vw;
+    color: darkorange;
+
+    @media (max-width: 550px) {
+      display: none;
+    }
+  }
+
+  .desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 125px;
+    width: 80vw;
+    padding: 5px;
+
+    @media (max-width: 550px) {
+      width: 100%;
+      text-align: center;
+      padding: 0;
+      height: 150px;
+    }
+  }
+  
+  @media (max-width: 650px) {
+    margin-top: 0;
+  }
+}
+
+// how it works
+
+#history {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  
+  iframe {
+    max-width: 500px;
+    width: 100%;
+  }
+}
+
+// pricing
+
+#price {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  
+  #urus, #Aventador {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: calc(100%  / 3);
+    margin: 10px;
+    border: 1px solid #000;
+    border-radius: 3px;
+    
+    .level {
+      background-color: #ddd;
+      color: black;
+      padding: 15px 0;
+      width: 100%;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+    
+    h2 {
+      margin-top: 15px;
+    }
+    
+    ol {
+      margin: 15px 0;
+      
+      li { padding: 5px 0; }
+    }
+    
+    button {
+      border: 0;
+      margin: 15px 0;
+      background-color: #f1c40f;
+      font-weight: 400;
+    
+      
+      &:hover {
+        background-color: orange;
+        transition: background-color 1s;
+      }
+    }
+  }
+  
+  @media (max-width: 800px) {
+    flex-direction: column;
+    
+    #urus, #Aventador, #Huracan { max-width: 300px; width: 100%; margin: 0 auto; margin-bottom: 10px; }
+  }
+}
+
+// footer
+
+footer {
+  margin-top: 30px;
+  background-color: #ddd;
+  padding: 20px;
+  
+  ul {
+    display: flex;
+    justify-content: flex-end;
+    
+    li {
+      padding: 0 10px;
+    }
+  }
+  
+  span {
+    margin-top: 5px;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 0.9em;
+    color: #444;
+  }
+}
+</style>
+<div id="wrapper">
+  <header id="header">
+    <div class="logo">
+      <img id="header-img" src="https://upload.wikimedia.org/wikipedia/en/thumb/d/df/Lamborghini_Logo.svg/296px-Lamborghini_Logo.svg.png" alt="origina logo">
+    </div>
+    
+  <nav id="nav-bar">
+    <ul>
+      <li><a class="nav-link" href="#models">models</a></li>
+      <li><a class="nav-link" href="#history">history</a></li>
+      <li><a class="nav-link" href="#price">price</a></li>
+    </ul>
+  </nav>
+    
+  </header>
+<section id="hero">
+  <h2>Product,Motorsports</h2>
+  <form id="form" action=action="https://www.freecodecamp.com/email-submit">
+   <input type="email" id="email" name="email" placeholder="enter your email address" required>
+    <input type="submit" value="enter" id="submit" class="button">
+    </input>
+  </form>
+</section>
+
+<div class="container">
+<section id="models">
+  <div class="grid">
+    <div class="icon">
+      <i class="fa fa-3x fa-fire"></i>
+    </div>
+<div class="desc">
+  <h2>Lamborghini urus</h2>
+  <p>The Lamborghini Urus is an SUV manufactured by Italian car manufacturer Lamborghini. It was unveiled on 4 December 2017 and will be put on the market for the 2018 model year.[3] The name comes from the Urusancestor of modern domestic cattle, also known as the aurochs.[4]</p>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="icon">
+      <i class="fa fa-3x fa-fire"></i>
+    </div>
+<div class="desc">
+  <h2>Lamborghini Aventador S</h2>
+  <p>The Lamborghini Aventador is a mid-engined sports car produced by the Italian automotive manufacturer Lamborghini.
+Launched on 28 February 2011 at the Geneva Motor Show, five months after its initial unveiling in Sant'Agata Bolognese, the vehicle, internally codenamed LB834, was designed to replace the then-decade-old Murciélago as the new flagship model.Soon after the Aventador's unveiling, Lamborghini announced that it had sold 12 cars, with deliveries starting in the second half of 2011.[9] By March 2016, Lamborghini had built 5,000 Aventadors, taking five years to achieve this milestone.[10]</p>
+   </div>
+  </div>
+  <div class="grid">
+    <div class="icon">
+      <i class="fa fa-3x fa-fire"></i>
+    </div>
+<div class="desc">
+  <h2>Lamborghini Huracán</h2>
+  <p>The Lamborghini Huracán (Spanish for "hurricane"; [u?a'kan]) is a sports car built by Italian automotive manufacturer Lamborghini replacing the previous V10 flagship, the Gallardo.[3] The Huracán made its worldwide debut at the 2014 Geneva Auto Show,[4] and was released in the second quarter of 2014. The LP 610-4 designation comes from the fact that this car has 610 metric horsepower and 4 wheel drive, while LP stands for "Longitudinale Posteriore", which refers to the longitudinal mid-rear engine position. The Huracán was named "The Supercar of the Year 2014" by automotive magazine Top Gear.[5]</p>
+  </div>
+  </div>
+    </section>
+  
+<section id="history">
+   <iframe  id="video"width="300" height="200" src="https://www.youtube.com/embed/CvdR1J88iPQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> 
+    </section>
+  
+<section id="price">
+  <div id="urus">
+  <div class="level">
+    lambhorgini urus
+  </div>
+  <h2>$200,000</h2>
+  <ol>
+    <li>5,113 mm</li>
+    <li>2,017 mm</li>
+    <li>1,638 mm</li>
+  </ol>
+      <button class="btn">SELECT</button>
+  </div>
+  <div id="Aventador">
+  <div class="level">
+    Lamborghini Aventador S
+  </div>
+  <h2>	$443,804</h2>
+  <ol>
+    <li>4,170 mm</li>
+    <li>2,030 mm</li>
+    <li>2,265mm</li>
+  </ol>
+    <button class="btn">SELECT</button>
+  </div>
+  <div id="Huracan">
+  <div class="level">
+    Lamborghini Huracán
+  </div>
+  <h2>	$324,751</h2>
+  <ol>
+    <li>4,459 mm</li>
+    <li>1,924 mm</li>
+    <li>1,165 mm</li>
+  </ol>
+        <button class="btn">SELECT</button>
+  </div>
+  <footer>
+    <ul>
+      <li><a href=#>copyright</a></li>
+      <li><a href=#>policies</a></li>
+      <li><a href=#>privacy</a></li>
+    </ul>
+    </footer>
+  
